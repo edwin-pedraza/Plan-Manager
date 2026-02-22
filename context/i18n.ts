@@ -1,0 +1,101 @@
+﻿import { Language, TaskStatus } from '@/types';
+
+const TRANSLATIONS: Record<Language, Record<string, string>> = {
+  en: {
+    saveError: 'Error saving',
+    activeProject: 'Active Project',
+    selectActiveProject: 'Select active project',
+    editProject: 'Edit Project',
+    deleteProject: 'Delete Project',
+    addNewProject: 'Add New Project',
+    team: 'Team',
+    goToAdmin: 'Go to Administration',
+    viewTeam: 'View team',
+    newTask: 'New Task',
+    language: 'Language',
+    dashboard: 'Dashboard',
+    roadmap: 'Roadmap',
+    kanbanBoard: 'Kanban Board',
+    implementation: 'Implementation',
+    aiAssistant: 'AI Assistant',
+    enableAI: 'Enable AI',
+    disableAI: 'Disable AI',
+    selectAIModel: 'Select AI model',
+    aiPlanner: 'AI Planner',
+    system: 'System',
+    administration: 'Administration',
+    collapseSidebar: 'Collapse sidebar',
+    expandSidebar: 'Expand sidebar',
+    collapse: 'Collapse',
+    loadingData: 'Loading data...',
+    noActiveProject: 'No active project',
+    createNewProjectPrompt: 'Create a new project to start managing your tasks.',
+    createProject: 'Create Project',
+    aiDisabled: 'AI Disabled',
+    enableAIFromAdmin: 'Enable AI from administration to use the planner.',
+    projectIntelligence: 'Project Intelligence',
+    suggestionsBasedOnCurrentData: 'Suggestions based on current data',
+    priority: 'Priority',
+    analyzingWithAI: 'Analyzing project with AI...',
+  },
+  es: {
+    saveError: 'Error al guardar',
+    activeProject: 'Proyecto activo',
+    selectActiveProject: 'Seleccionar proyecto activo',
+    editProject: 'Editar proyecto',
+    deleteProject: 'Eliminar proyecto',
+    addNewProject: 'Anadir nuevo proyecto',
+    team: 'Equipo',
+    goToAdmin: 'Ir a administracion',
+    viewTeam: 'Ver equipo',
+    newTask: 'Nueva tarea',
+    language: 'Idioma',
+    dashboard: 'Panel de control',
+    roadmap: 'Mapa de ruta',
+    kanbanBoard: 'Tablero Kanban',
+    implementation: 'Implementacion',
+    aiAssistant: 'Asistente IA',
+    enableAI: 'Activar IA',
+    disableAI: 'Desactivar IA',
+    selectAIModel: 'Seleccionar modelo de IA',
+    aiPlanner: 'Planificador IA',
+    system: 'Sistema',
+    administration: 'Administracion',
+    collapseSidebar: 'Colapsar barra lateral',
+    expandSidebar: 'Expandir barra lateral',
+    collapse: 'Colapsar',
+    loadingData: 'Cargando datos...',
+    noActiveProject: 'Sin proyecto activo',
+    createNewProjectPrompt: 'Crea un nuevo proyecto para comenzar a gestionar tus tareas.',
+    createProject: 'Crear proyecto',
+    aiDisabled: 'IA deshabilitada',
+    enableAIFromAdmin: 'Activa la IA desde administracion para usar el planificador.',
+    projectIntelligence: 'Inteligencia de proyecto',
+    suggestionsBasedOnCurrentData: 'Sugerencias basadas en datos actuales',
+    priority: 'Prioridad',
+    analyzingWithAI: 'Analizando proyecto con IA...',
+  },
+};
+
+const STATUS_LABELS: Record<Language, Record<TaskStatus, string>> = {
+  en: {
+    Todo: 'To Do',
+    'In Progress': 'In Progress',
+    Review: 'Review',
+    Done: 'Done',
+  },
+  es: {
+    Todo: 'Por hacer',
+    'In Progress': 'En progreso',
+    Review: 'Revision',
+    Done: 'Completada',
+  },
+};
+
+export const t = (language: Language, key: string): string => {
+  return TRANSLATIONS[language][key] ?? TRANSLATIONS.en[key] ?? key;
+};
+
+export const getLocale = (language: Language): string => (language === 'es' ? 'es-ES' : 'en-US');
+
+export const getStatusLabel = (language: Language, status: TaskStatus): string => STATUS_LABELS[language][status];

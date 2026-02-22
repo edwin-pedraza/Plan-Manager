@@ -1,0 +1,163 @@
+{
+  "projects": [
+    {
+      "id": "p1",
+      "name": "Project Test",
+      "description": "Building a cloud-native CRM solution for enterprise clients.",
+      "dueDate": "2026-06-30",
+      "stages": [
+        {
+          "id": "s1",
+          "name": "Planning & Discovery",
+          "order": 0
+        },
+        {
+          "id": "s2",
+          "name": "Design & Prototyping",
+          "order": 1
+        },
+        {
+          "id": "s3",
+          "name": "Development Phase 1",
+          "order": 2
+        },
+        {
+          "id": "s4",
+          "name": "Testing & QA",
+          "order": 3
+        }
+      ],
+      "tasks": [
+        {
+          "id": "t1",
+          "title": "Market Analysis",
+          "description": "Analyze competitor features and pricing models.",
+          "stageId": "s1",
+          "status": "Done",
+          "startDate": "2024-05-01",
+          "endDate": "2024-05-05",
+          "estimatedHours": 40,
+          "actualHours": 51.5,
+          "assignee": "Edwin Pedraza"
+        },
+        {
+          "id": "t2",
+          "title": "UX Wireframes",
+          "description": "Create low-fidelity wireframes for main modules.",
+          "stageId": "s2",
+          "status": "In Progress",
+          "startDate": "2024-05-06",
+          "endDate": "2024-05-15",
+          "estimatedHours": 60,
+          "actualHours": 33,
+          "assignee": "Lina Gacria"
+        },
+        {
+          "id": "t3",
+          "title": "API Architecture",
+          "description": "Define microservices and endpoint structures.",
+          "stageId": "s3",
+          "status": "Todo",
+          "startDate": "2024-05-16",
+          "endDate": "2024-05-25",
+          "estimatedHours": 80,
+          "actualHours": 0,
+          "assignee": "Edwin Pedraza"
+        }
+      ]
+    }
+  ],
+  "activeProjectId": "p1",
+  "timeLogs": [
+    {
+      "id": "l1",
+      "taskId": "t1",
+      "date": "2024-05-01",
+      "hours": 8,
+      "userId": "u1",
+      "stageId": "s1"
+    },
+    {
+      "id": "l2",
+      "taskId": "t1",
+      "date": "2024-05-02",
+      "hours": 8,
+      "userId": "u1",
+      "stageId": "s1"
+    },
+    {
+      "id": "l3",
+      "taskId": "t2",
+      "date": "2024-05-07",
+      "hours": 4,
+      "userId": "u2",
+      "stageId": "s2"
+    },
+    {
+      "taskId": "t1",
+      "date": "2026-02-17",
+      "hours": 5,
+      "userId": "u1",
+      "id": "log-1771334072177",
+      "stageId": "s1"
+    },
+    {
+      "taskId": "t1",
+      "date": "2026-02-17",
+      "hours": 6.5,
+      "userId": "u1",
+      "id": "log-1771334105277",
+      "stageId": "s1"
+    },
+    {
+      "taskId": "t2",
+      "date": "2026-02-17",
+      "hours": 6.5,
+      "userId": "u1",
+      "id": "log-1771334121893",
+      "stageId": "s2"
+    },
+    {
+      "taskId": "t1",
+      "date": "2026-02-16",
+      "hours": 1,
+      "userId": "u1",
+      "id": "log-1771334278097",
+      "stageId": "s1"
+    },
+    {
+      "taskId": "t1",
+      "date": "2026-02-15",
+      "hours": 1,
+      "userId": "u1",
+      "id": "log-1771334281589",
+      "stageId": "s1"
+    },
+    {
+      "taskId": "t2",
+      "date": "2026-02-15",
+      "hours": 1,
+      "userId": "u1",
+      "id": "log-1771334849477",
+      "stageId": "s2"
+    }
+  ],
+  "members": [
+    {
+      "name": "Edwin Pedraza",
+      "role": "BI",
+      "color": "#4299E1",
+      "id": "mbr-1771671542409"
+    },
+    {
+      "name": "Lina Gacria",
+      "role": "CSA",
+      "color": "#ef4444",
+      "id": "mbr-1771671564345"
+    }
+  ],
+  "aiSettings": {
+    "enabled": false,
+    "model": "gemini-2.5-flash"
+  }
+}
